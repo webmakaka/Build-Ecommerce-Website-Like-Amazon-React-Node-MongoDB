@@ -1,11 +1,11 @@
+import { createReview, detailsProduct } from 'actions/productActions';
+import LoadingBox from 'components/LoadingBox';
+import MessageBox from 'components/MessageBox';
+import Rating from 'components/Rating';
+import { PRODUCT_REVIEW_CREATE_RESET } from 'constants/productConstants';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { createReview, detailsProduct } from '../actions/productActions';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
-import Rating from '../components/Rating';
-import { PRODUCT_REVIEW_CREATE_RESET } from '../constants/productConstants';
 
 export default function ProductScreen(props) {
   const dispatch = useDispatch();

@@ -1,10 +1,10 @@
+import { detailsProduct, updateProduct } from 'actions/productActions';
+import Axios from 'axios';
+import LoadingBox from 'components/LoadingBox';
+import MessageBox from 'components/MessageBox';
+import { PRODUCT_UPDATE_RESET } from 'constants/productConstants';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Axios from 'axios';
-import { detailsProduct, updateProduct } from '../actions/productActions';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
-import { PRODUCT_UPDATE_RESET } from '../constants/productConstants';
 
 export default function ProductEditScreen(props) {
   const productId = props.match.params.id;

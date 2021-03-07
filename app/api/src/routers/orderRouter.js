@@ -1,13 +1,13 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import Order from '../models/orderModel.js';
+import Order from 'models/orderModel.js';
 import {
   isAdmin,
   isAuth,
   isSellerOrAdmin,
   mailgun,
   payOrderEmailTemplate,
-} from '../utils.js';
+} from 'utils.js';
 
 const orderRouter = express.Router();
 orderRouter.get(

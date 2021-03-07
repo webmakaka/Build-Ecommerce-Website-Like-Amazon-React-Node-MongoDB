@@ -1,15 +1,15 @@
+import bcrypt from 'bcryptjs';
+import data from 'data.js';
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import bcrypt from 'bcryptjs';
-import data from '../data.js';
-import User from '../models/userModel.js';
-import { generateToken, isAdmin, isAuth } from '../utils.js';
+import User from 'models/userModel.js';
+import { generateToken, isAdmin, isAuth } from 'utils.js';
 
 const userRouter = express.Router();
 
 userRouter.get(
   '/top-sellers',
-  expressAsyncHandler(async (req, res) => {
+  expressAsyncHandler(async (_req, res) => {
     const topSellers = await User.find({ isSeller: true })
       .sort({ 'seller.rating': -1 })
       .limit(3);
@@ -19,7 +19,7 @@ userRouter.get(
 
 userRouter.get(
   '/seed',
-  expressAsyncHandler(async (req, res) => {
+  expressAsyncHandler(async (_req, res) => {
     // await User.remove({});
     const createdUsers = await User.insertMany(data.users);
     res.send({ createdUsers });

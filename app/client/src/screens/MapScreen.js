@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
 import {
-  LoadScript,
   GoogleMap,
-  StandaloneSearchBox,
+  LoadScript,
   Marker,
+  StandaloneSearchBox,
 } from '@react-google-maps/api';
-import LoadingBox from '../components/LoadingBox';
 import Axios from 'axios';
-import { USER_ADDRESS_MAP_CONFIRM } from '../constants/userConstants';
+import LoadingBox from 'components/LoadingBox';
+import { USER_ADDRESS_MAP_CONFIRM } from 'constants/userConstants';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 const libs = ['places'];
