@@ -58,19 +58,19 @@ $ npm start
 $ curl http://localhost:5000/api/users/seed \
     | python -m json.tool
 
-//It creates 6 sample products
+// It creates 6 sample products
 $ curl http://localhost:5000/api/products/seed \
     | python -m json.tool
 ```
 
 ### 6. Admin Login
 
-- Run http://localhost:3000/signin
-- Enter admin email and password and click signin.
+- Browser: http://localhost:3000/signin
 
 <br/>
 
 ```
+login pass
 admin@example.com 1234
 user@example.com 1234
 ```
